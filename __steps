@@ -1,0 +1,49 @@
+ ----- setup -------
+1. make directory
+2. initialize and install express (npm init, npm install express)
+3. install cors, mondodb, dotenv (npm i cors mondodb dotenv)
+4. create index.js and .gitignore file
+    1. add mode_modules in .gitignore file
+5. require and use cors, use express.json. set port.
+6. setup basic index.js file (app.get, app.listen)
+
+
+----- connection to mongodb ------------
+1. create an user in mongodb (1st time only)
+2. setup user and collect username and password from mongodb
+3. copy and paste connection string and run() function(database > connect > driver > node) in to index.js file, replace the password
+
+--------- post and read data from database -----------
+
+1. create database, collection and setup posting(appp.post) inside run function (mobgo db nodejs usage example)
+2. get cursore by finding in collection (collection.find() )
+3. conver cursor to array if have multiple data.
+4. load data by router loader method from api link according the path.
+
+
+--------- delete from database ------------
+1. setup app.delete with dynamic id
+2. get id which will be delete by dynamic id (send from client side by fetching link with dynamic id and set method to DELETE on client side).
+3. 
+
+
+---------- update single data -----------
+1. setup api that collect single data from mongodb
+2. set a link with route path including unique id in users loop
+3. create a component for update form and setup routing
+4. load data by api with unique id(from params on loader) using loader from route
+5. catch data in upadate component by useLoaderData()
+6. set user info in fields as default values
+7. setup put method inside handle update function
+8. setup app.put operation in server side
+    1. catch path, id, update info
+    2. set filter, option and update info (set infos as object iside '$set' key)
+    3. set updateOne(filter, what to update, option)
+
+
+--------- dotenv --------------
+1. install dotenv
+2. require dotenv ( require('dotenv').config(); )
+3. create .env file in root and add it in .gitignore file
+4. set secrets in .env file and access by - process.env.MY_PASSWORD
+4. set user and password from .env file into mongodb connection string
